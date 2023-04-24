@@ -1,0 +1,10 @@
+@Transactional(propagation =Propagation.REQUIRED)
+	public Product add(Product product) {
+		
+			Product productT=productRepository.save(product);
+			User user=new User();
+			user.setUserId(5L);
+			user.setDateTime(System.currentTimeMillis()+"66");
+			User userT=userRepository.save(user);
+			//System.out.println(userT);
+			return productT;}

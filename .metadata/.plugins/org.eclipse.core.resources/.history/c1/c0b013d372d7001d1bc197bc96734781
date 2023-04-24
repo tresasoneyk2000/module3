@@ -1,0 +1,11 @@
+/**
+ * 
+ */
+/**
+ * @author Administrator
+ *
+ */
+module ioc {
+	requires spring.core;
+	requires spring.beans;
+}

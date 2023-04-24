@@ -1,0 +1,8 @@
+server.port=8090
+
+spring.datasource.driver=class-name=com.mysql.cj.jdbc.Driver
+spring.datasorce.url=jdbc:mysql://localhost:3306/sakila
+spring.datasource.username=root
+spring,datasource.password=pass@word
+
+spring.jpa.generate-ddl-auto=create

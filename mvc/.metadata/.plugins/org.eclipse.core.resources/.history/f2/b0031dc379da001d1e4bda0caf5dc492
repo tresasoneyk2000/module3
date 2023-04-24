@@ -1,0 +1,5 @@
+package com.ust.rest.respository;
+
+public interface ProductRepository  extends JpRepository <Product,Long>{
+
+}

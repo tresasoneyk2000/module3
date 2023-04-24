@@ -1,0 +1,19 @@
+package com.ust.javaconfig;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+public class TestBean {
+
+	public static void main(String[] args) {
+		
+		ApplicationContext ctxt=new AnnotationConfigApplicationContext(AppConfig.class);
+		HelloWorld hello= (HelloWorld)ctxt.getBean("helloBean");
+		System.out.println(hello.message());
+
+	}
+
+}

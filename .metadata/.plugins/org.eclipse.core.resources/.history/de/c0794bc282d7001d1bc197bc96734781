@@ -1,0 +1,13 @@
+/**
+ * 
+ */
+/**
+ * @author Administrator
+ *
+ */
+module ioc {
+
+    exports com.ust.ioc;
+	requires spring.core;
+	requires spring.beans;
+}

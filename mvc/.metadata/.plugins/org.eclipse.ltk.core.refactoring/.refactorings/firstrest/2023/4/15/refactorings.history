@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Product.java&apos; to &apos;firstrestmysqljpa/src/main/java/com.ust.rest.resource&apos;&#x0D;&#x0A;- Original project: &apos;firstrest&apos;&#x0D;&#x0A;- Destination element: &apos;firstrestmysqljpa/src/main/java/com.ust.rest.resource&apos;&#x0D;&#x0A;- Original element: &apos;com.ust.rest.resource.Product.java&apos;" description="Copy compilation unit" destination="=firstrestmysqljpa/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.ust.rest.resource" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.ust.rest.resource{Product.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1681445151886" units="1" version="1.0"/>
+</session>
