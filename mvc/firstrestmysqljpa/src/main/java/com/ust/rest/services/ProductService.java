@@ -60,7 +60,7 @@ public class ProductService {
 	
 	
 	
-	public Product getProduct(long productId) {
+	public  Product getProduct(long productId) {
 		Optional<Product> optional=
 				productRepository.findById(productId);
 				if(optional.isPresent()) {

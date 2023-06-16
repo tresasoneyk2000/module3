@@ -25,24 +25,17 @@ import io.swagger.annotations.ApiOperation;
 
 @RestController
 @RequestMapping("/product/api.2.0")
-@Api(value="Product Service API 2.0", description="Rest end points of ApI")
+//@Api(value="Product Service API 2.0", description="Rest end points of ApI")
 
 
 
 public class ProductResource {
 	@Autowired
 	ProductService service;
-	@GetMapping
+	@GetMapping("/retrive/{productId}")
 
-	@RequestMapping("/retrive/{productid}")
-	@ApiOperation(value="Returns the product entity ")
-	
-	
-	
-
-	
-	
-	
+	//@RequestMapping
+	//@ApiOperation(value="Returns the product entity ")
 	
 	public Product fetchProduct(@PathVariable long productId) {
 		return service.getProduct(productId);
@@ -50,17 +43,26 @@ public class ProductResource {
 	}
 	
 //	
+	
+	@GetMapping
+	public String test() {
+		return "test() called...";
+	}
 //	
 	@GetMapping
 	@RequestMapping("/retrieve/all")
-	@ApiOperation(value="Returns the product entity ")
+	//@ApiOperation(value="Returns the product entity ")
 
-	public List<Product> fetchProducts(){
-		return service.getProducts();
+	public ResponseEntity<List<Product>> fetchProducts(){
+		//return ResponseEntity.status(HttpStatus.ACCEPTED).body(service.getProducts());
+		//return ResponseEntity.ok(service.getProducts());
+		//return new ResponseEntity(service.getProducts(),HttpStatus.ACCEPTED);
+		return ResponseEntity.ok().body(service.getProducts());
+		
 	}
 @PostMapping
 @RequestMapping(value="/create", consumes=MediaType.APPLICATION_JSON_VALUE, produces=MediaType.APPLICATION_JSON_VALUE )
-@ApiOperation(value="Returns the product entity ")
+//@ApiOperation(value="Returns the product entity ")
 public ResponseEntity<?> addProduct(@RequestBody Product product){
 	Exception exception=null;
 	Product tempProduct=null;
@@ -90,7 +92,7 @@ public ResponseEntity<?> addProduct(@RequestBody Product product){
 @PutMapping
 @RequestMapping(value="/update" , consumes=MediaType.APPLICATION_JSON_VALUE, produces=MediaType.APPLICATION_JSON_VALUE )
 
-@ApiOperation(value="Returns the product entity ")
+//@ApiOperation(value="Returns the product entity ")
 public Product updateProduct(@RequestBody Product product) {
 	return service.updateProduct(product);
 }
@@ -98,9 +100,10 @@ public Product updateProduct(@RequestBody Product product) {
 //
 @DeleteMapping
 @RequestMapping(value="delete/{productId}")
-@ApiOperation(value="Returns the product entity ")
+//@ApiOperation(value="Returns the product entity ")
 public void deleteProduct(@PathVariable long productId) {
 	service.deleteProduct(productId);
+	
 }
 //
 
